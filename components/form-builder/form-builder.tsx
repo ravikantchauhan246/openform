@@ -41,6 +41,7 @@ import {
   Settings,
   Palette,
   FileText,
+  Pencil,
 } from 'lucide-react'
 import Link from 'next/link'
 import { QuestionEditor } from './question-editor'
@@ -173,15 +174,18 @@ export function FormBuilder({ form: initialForm }: FormBuilderProps) {
             </Button>
           </Link>
           <Separator orientation="vertical" className="h-6" />
-          <Input
-            value={form.title}
-            onChange={(e) => {
-              setForm({ ...form, title: e.target.value })
-              setHasUnsavedChanges(true)
-            }}
-            className="text-lg font-semibold border-0 bg-transparent focus-visible:ring-0 px-0 max-w-xs"
-            placeholder="Untitled Form"
-          />
+          <div className="group relative flex items-center">
+            <Input
+              value={form.title}
+              onChange={(e) => {
+                setForm({ ...form, title: e.target.value })
+                setHasUnsavedChanges(true)
+              }}
+              className="text-lg font-semibold border-0 border-b-2 border-transparent bg-transparent rounded-none focus-visible:ring-0 focus-visible:border-violet-500 hover:border-gray-300 px-1 pr-7 max-w-xs transition-colors"
+              placeholder="Untitled Form"
+            />
+            <Pencil className="w-3.5 h-3.5 text-gray-400 absolute right-1 opacity-0 group-hover:opacity-100 group-focus-within:opacity-0 transition-opacity pointer-events-none" />
+          </div>
           {form.status === 'published' && (
             <Badge className="bg-emerald-100 text-emerald-700">Published</Badge>
           )}
