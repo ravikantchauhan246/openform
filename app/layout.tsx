@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Plus_Jakarta_Sans, Outfit, Sora, Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster richColors position="top-center" />
+        <Analytics />
       </body>
     </html>
   );
