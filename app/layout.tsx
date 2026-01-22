@@ -32,6 +32,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "OpenForm - Create Beautiful Forms",
   description: "Build stunning, TypeForm-style forms in minutes. Free and open source.",
+  icons: {
+    icon: "/survey-results.png",
+  },
 };
 
 export default function RootLayout({
