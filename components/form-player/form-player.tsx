@@ -490,13 +490,13 @@ export function FormPlayer({ form }: FormPlayerProps) {
 
         {/* OpenForm branding */}
         <a 
-          href="/"
+          href="https://www.jadeglobal.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm opacity-50 hover:opacity-70 transition-opacity"
           style={{ color: theme.textColor }}
         >
-          Powered by <span className="font-semibold">OpenForm</span>
+          <span className="font-semibold">Jade</span>
         </a>
       </footer>
     </div>
